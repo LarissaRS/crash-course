@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>RMarkdown + GitHub crash course</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Catarina Roman" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: middle, left, title-slide
+
+# RMarkdown + GitHub crash course
+### Catarina Roman
+
+---
+
+
+
+
+# Antes do Curso RMarkdown + GitHub
+
+- Criar uma conta no GitHub: https://github.com/
+- Baixar o git no seu computador: https://git-scm.com/downloads
+- Baixar o pandoc no seu computador (é pesado, seu computador precisa ter espaço): https://pandoc.org/installing.html
+- Baixar o RStudio no seu computador: https://rstudio.com/products/rstudio/download/
+- Baixar o LaTeX ou MikTeX no seu computador: https://www.latex-project.org/get/ 
+
+O começo é chato, mas essas ferramentas servem pra muita coisa:
+- Fazer codebooks e artigos cuja bibliografia se organiza sozinha;
+- Fazer seu site pessoal (por exemplo: https://catarinaroman.github.io/ );
+- Fazer páginas web para seus projetos (ex.: https://catarinaroman.github.io/las-americas/ );
+- Fazer apresentações como esta que você está vendo agora! :))
+
+Tudo pronto?
+
+---
+## Criando seu repo do zero
+
+Aqui é realmente bem mais fácil usar a interface do GitHub.
+
+1. tela inicial do GitHub
+2. botão verdinho no canto superior esquerdo
+3. nome sempre sem espaços (nomes dos arquivos também)
+4. sempre colocar README.md
+5. sempre colocar [.gitignore](https://www.toptal.com/developers/gitignore/api/macos,r,latex,python,vim,libreoffice,microsoftoffice)
+6. MIT License
+7. colocar seus arquivos no repo
+
+Para criar pastas (força bruta -- tem um jeito bem melhor que explicarei depois!)
+
+1. na interface, clicar no arquivo que já está no repo
+2. clicar no lapiszinho para editar o arquivo na interface
+3. mudar o nome do arquivo para **nome-da-pasta/nome-do-arquivo**
+4. fazer isso para todos os arquivos que quer colocar dentro daquela mesma pasta
+
+---
+## Operacionalizando
+
+Vamos aprender a mexer no GitHub e no RMarkdown ao mesmo tempo.
+
+Por favor abra esse link: https://github.com/catarinaroman/crash-course .
+
+Passos:
+
+1. fork ou criar seu repo
+2. copiar link do repo
+3. abrir terminal
+4. **cd ~/Desktop** | **cd C:\\Desktop** para Windows (ou algo do tipo rs)
+5. **git clone "link-do-repo"**
+6. **cd ~/Desktop/nome-do-repo**
+7. **open nome-do-arquivo.Rmd**
+8. fazer as alterações que você quer ao arquivo
+9. voltar ao terminal
+10. **git add .**
+11. **git commit -m 'mensagem de commit'**
+12. **git push**
+
+---
+
+## Seguindo (Git)
+
+Quando já tenho o repo remoto e estou trabalhando em grupo, outra pessoa pode ter feito alterações aos arquivos. Se eu mexer nos arquivos desatualizados e tentar push eles para o repo, o git não vai gostar, e eu não vou conseguir fazer minhas alterações (ou então vou ter que começar do passo 2, e refazer as alterações).
+
+**Importante**: Sempre antes de mexer num repo compartilhado, seguir os passos:
+
+1. abrir o terminal
+2. **cd ~/Desktop/nome-do-repo**
+3. **git pull**
+
+Assim, ele vai atualizar o seu repositório remoto com o que está online.
+
+**Para criar pastas** basta organizar os arquivos dentro das pastas que você quer no seu repo remoto. Daí você segue os passos de commit normal:
+
+1. voltar ao terminal
+2. **git add .**
+3. **git commit -m 'mensagem de commit'**
+4. **git push**
+
+---
+
+## Criando branches
+
+Branches são formas de duas (ou mais) pessoas trabalharem nos mesmos arquivos simultaneamente, ou então de usar os mesmos arquivos para diferentes propósitos. Por exemplo, quando estamos escrevendo um paper e queremos deixar os materiais suplementares no GitHub, fazemos um branch com tudo normal, e um branch para submission, onde temos os mesmos arquivos, mas tiramos todos os nomes dos autores.
+
+Para criar um novo branch:
+
+1. abrir o terminal
+2. **cd ~/Desktop/nome-do-repo**
+3. **git checkout -b nome-do-branch**
+4. **git push -- set-upstream origin nome-do-branch**
+
+---
+## Seguindo (branches)
+
+Para editar os arquivos de um branch que não é o master, preciso falar isso para o git:
+
+1. abrir o terminal
+2. **cd ~/Desktop/nome-do-repo**
+3. **git checkout nome-do-branch**
+
+Tudo o que eu fizer agora com os arquivos vai ser feito com os arquivos desse branch especifico. Para voltar para o branch principal:
+
+1. **git checkout main**
+
+---
+## Manipulando documentos em RMarkdown
+
+[RMarkdown Cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+Por favor abram o arquivo **codebook-2019-brazil.Rmd**.
+
+---
+# Criando documentos em RMarkdown
+
+Ctrl+C, Ctrl+V é tudo 
+
+Cabeçalho:
+
+![Cabeçalho](header.png)
+
+---
+
+# Links úteis
+
+[Markdown Cheatsheet](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+[TinyTeX](https://yihui.org/tinytex/)
+
+[.gitignore](https://www.toptal.com/developers/gitignore/api/macos,r,latex,python,vim,libreoffice,microsoftoffice)
+
+---
+
+## Por hoje é só!
+
+Semana que vem veremos: 
+
+- Mais recursos para edição de documentos (imagens, plots, tabelas, etc.)
+- GitHub pages
+- Apresentações em html (Dá para abrir em qualquer computador, sem nunca desconfigurar nada!)
+
+**Obrigada! :)**
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"ratio": "16:10",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
