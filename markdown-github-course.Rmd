@@ -101,12 +101,7 @@ Quando já tenho o repo remoto e estou trabalhando em grupo, outra pessoa pode t
 
 Assim, ele vai atualizar o seu repositório remoto com o que está online.
 
-**Para criar pastas** basta organizar os arquivos dentro das pastas que você quer no seu repo remoto. Daí você segue os passos de commit normal:
-
-1. voltar ao terminal
-2. **git add .**
-3. **git commit -m 'mensagem de commit'**
-4. **git push**
+**Para criar pastas** basta organizar os arquivos dentro das pastas que você quer no seu repo remoto. Daí você segue os passos de commit normal.
 
 ---
 
