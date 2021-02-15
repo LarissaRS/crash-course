@@ -22,6 +22,10 @@ output:
 
 \newpage
 
+# Preface
+
+Thanks to fapesp and cebrap.
+
 # Introduction | Introdução
 
 \vspace{.7cm}
