@@ -1,5 +1,5 @@
 ---
-title: "RMarkdown + GitHub crash course"
+title: "1 RMarkdown + GitHub crash course"
 author: "Catarina Roman"
 subtitle: ""
 date: \today

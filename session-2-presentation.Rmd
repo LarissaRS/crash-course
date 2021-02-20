@@ -1,0 +1,62 @@
+---
+title: "2 RMarkdown + GitHub crash course"
+author: "Catarina Roman"
+subtitle: ""
+date: \today
+output: 
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature: 
+      beforeInit: "macros.js"
+      highlightStyle: github
+      ratio: 16:10
+      titleSlideClass: [middle, left]
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+options(htmltools.dir.version = FALSE)
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#FFC0CB",
+  header_h1_font_size = "2.25rem",
+  header_h2_font_size = "1.85rem",
+  header_font_google  = google_font("Bree Serif"),
+  text_font_google    = google_font("Tajawal", "300", "300i"),
+  text_font_size      = "1.3rem",
+  code_font_google    = google_font("Fira Mono")
+)
+```
+
+# Semana passada vimos
+
+- Como usar a interface do GitHub
+- Como criar repositórios
+- Como manipular arquivos no repositório remoto
+- Como subir atualizações para o repositório online
+- Como criar novos arquivos de RMarkdown
+- Como compilar arquivos de RMarkdown
+
+Tudo isso ok?
+
+## Recomendo
+
+Para acostumar com o RMarkdown, comece a escrever pequenas coisinhas como esse tipo de documento. Por exemplo, ao invés de fazer anotações de aula, tomar notas pessoais, começar rascunhos de projetos no Word, faça por aqui!
+
+---
+
+# Revisão do RMarkdown
+
+Um link importante que não mandei ainda: [LaTeX cheatsheet](https://wch.github.io/latexsheet/) 
+
+
+
+
+
+
+
+
+
+
+

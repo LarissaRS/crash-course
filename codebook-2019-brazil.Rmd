@@ -21,10 +21,6 @@ output:
     template: article-template.latex
 ---
 
-```{}
-
-```
-
 \newpage
 
 # Introduction | Introdução
