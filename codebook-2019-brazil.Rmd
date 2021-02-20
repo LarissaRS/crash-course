@@ -2,6 +2,7 @@
 title: "Codebook"
 subtitle: "2019"
 author: "Brazil, the Americas and the World Project | 2019"
+date: \today
 fontfamily: libertine
 fontawesome: yes
 fontsize: 12pt
@@ -20,11 +21,11 @@ output:
     template: article-template.latex
 ---
 
+```{}
+
+```
+
 \newpage
-
-# Preface
-
-Thanks to fapesp and cebrap.
 
 # Introduction | Introdução
 
