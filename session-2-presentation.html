@@ -29,7 +29,7 @@ class: middle, left, title-slide
 
 Tudo isso ok?
 
-## Recomendo
+## Recomendação
 
 Para acostumar com o RMarkdown, comece a escrever pequenas coisinhas como esse tipo de documento. Por exemplo, ao invés de fazer anotações de aula, tomar notas pessoais, começar rascunhos de projetos no Word, faça por aqui!
 
@@ -37,7 +37,76 @@ Para acostumar com o RMarkdown, comece a escrever pequenas coisinhas como esse t
 
 # Revisão do RMarkdown
 
-Um link importante que não mandei ainda: [LaTeX cheatsheet](https://wch.github.io/latexsheet/)
+Um link importante que não mandei ainda: [LaTeX cheatsheet](https://wch.github.io/latexsheet/) 
+
+Cabeçalho:
+
+![Cabeçalho](header.png)
+
+---
+
+# Revisão do RMarkdown
+
+Inserir fotos (como essa abaixo): 
+
+- ![Tabela](nome-da-foto.png)
+
+![Tabelita](tabelita.png)
+
+
+![Tabela](tabela.png)
+
+---
+# Voltando ao GitHub
+## Criando branches
+
+Branches são formas de duas (ou mais) pessoas trabalharem nos mesmos arquivos simultaneamente, ou então de usar os mesmos arquivos para diferentes propósitos. Por exemplo, quando estamos escrevendo um paper e queremos deixar os materiais suplementares no GitHub, fazemos um branch com tudo normal, e um branch para submission, onde temos os mesmos arquivos, mas tiramos todos os nomes dos autores.
+
+Para criar um novo branch:
+
+1. abrir o terminal
+2. **cd ~/Desktop/nome-do-repo**
+3. **git checkout -b nome-do-branch**
+4. **git push -- set-upstream origin nome-do-branch**
+
+---
+## Seguindo (branches)
+
+Para editar os arquivos de um branch que não é o master, preciso falar isso para o git:
+
+1. abrir o terminal
+2. **cd ~/Desktop/nome-do-repo**
+3. **git checkout nome-do-branch**
+
+Tudo o que eu fizer agora com os arquivos vai ser feito com os arquivos desse branch especifico. Para voltar para o branch principal:
+
+1. **git checkout main**
+
+---
+
+# GitHub pages
+
+Por favor, entrem no link: https://catarinaroman.github.io/las-americas/
+Clique. no botão "View on GitHub".
+
+Vamos aprender a fazer essa página de um jeito muito fácil.
+
+Caminho:
+
+- Main branch do seu repo
+- Settings
+- Abaixe até aparecer GitHub pages
+- Source --&gt; Main
+- Template --&gt; Escolha o que preferir
+- Criado o site, vamos ver os documentos
+  * index.md
+  * _config.yml
+  
+É possível mudar os parâmetros do template (eu acho), mas é preciso descobrir quais os argumentos que fazem isso -- que não sei quais são.
+
+---
+
+# Apresentações em .html
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
